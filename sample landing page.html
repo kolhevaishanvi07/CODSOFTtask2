@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oppo Landing Page</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg, #0f0f0f, #1a1a1a, #00c853, #0f0f0f);
+    background-size: 400% 400%;
+    animation: bgMove 8s ease infinite;
+    color:white;
+}
+
+@keyframes bgMove {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+    position:sticky;
+    top:0;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:bold;
+    color:#00ff99;
+    animation: fadeDown 1s ease;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00ff99;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:60px;
+}
+.hero .text{
+    max-width:50%;
+    animation: slideLeft 1.5s ease;
+}
+.hero h1{
+    font-size:45px;
+}
+.hero p{
+    margin:15px 0;
+    color:#ddd;
+}
+.hero h2{
+    color:#00ff99;
+    margin-bottom:20px;
+}
+
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    background:#00c853;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+    animation: fadeUp 2s ease;
+}
+
+button:hover{
+    background:#009624;
+    transform:scale(1.1);
+}
+
+.hero img{
+    width:320px;
+    border-radius:15px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.features{
+    display:flex;
+    justify-content:space-around;
+    padding:50px;
+}
+.box{
+    width:28%;
+    padding:20px;
+    text-align:center;
+    background:rgba(255,255,255,0.1);
+    border-radius:12px;
+    backdrop-filter: blur(10px);
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    transition:0.3s;
+    animation: fadeUp 2s ease;
+}
+
+.box:hover{
+    transform:translateY(-10px);
+    background:rgba(0,255,153,0.2);
+}
+
+footer{
+    text-align:center;
+    padding:15px;
+    background:rgba(0,0,0,0.7);
+}
+@keyframes slideLeft{
+    from{opacity:0; transform:translateX(-100px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeDown{
+    from{opacity:0; transform:translateY(-50px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(50px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+@keyframes float{
+    0%{transform:translateY(0px);}
+    50%{transform:translateY(-20px);}
+    100%{transform:translateY(0px);}
+}
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .hero .text{
+        max-width:100%;
+    }
+
+    .features{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .box{
+        width:100%;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">OPPO</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">Models</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="text">
+        <h1>OPPO Reno Series</h1>
+        <p>Capture stunning photos with ultra HD camera and premium design.</p>
+        <h2>Starting at ₹29,999</h2>
+        <button>Buy Now</button>
+    </div>
+
+    <img src="https://fdn2.gsmarena.com/vv/pics/oppo/oppo-reno10-pro-5g-1.jpg" alt="Oppo Phone">
+</section>
+
+<section class="features">
+    <div class="box">
+        <h3>📸 Camera</h3>
+        <p>64MP Ultra HD Photography</p>
+    </div>
+
+    <div class="box">
+        <h3>🔋 Battery</h3>
+        <p>5000mAh Long-lasting Battery</p>
+    </div>
+
+    <div class="box">
+        <h3>⚡ Performance</h3>
+        <p>Fast Snapdragon Processor</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 OPPO Landing Page | Designed for Beginners
+</footer>
+
+</body>
+</html>
